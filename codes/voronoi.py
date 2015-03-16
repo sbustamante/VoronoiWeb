@@ -141,12 +141,12 @@ class voronoifield(object):
 	    print("ERROR: voronoisurface only can compute surface over 2D tessellations")
 	    return 0
 	  
-	self.suface = []
+	self.surface = []
 	for reg in self.regions[self.point_region]:
 	    vertices = self.vertices[reg]
 	    nver = len(vertices)
 	    surface = 0
-	    for i_surf in xrange(nver):
+	    for i in xrange(nver-1):
 		surface += vertices[i,0]*vertices[i+1,1] - vertices[i+1,0]*vertices[i,1]
 	    self.surface.append( 0.5*abs(surface) )
 	self.surface = np.array(self.surface)
