@@ -145,8 +145,10 @@ class voronoifield(object):
 	for reg in self.regions[self.point_region]:
 	    vertices = self.vertices[reg]
 	    nver = len(vertices)
+	    vertices = np.append( vertices, vertices[0] )
+	    vertices = vertices.reshape( (nver+1,2) )
 	    surface = 0
-	    for i in xrange(nver-1):
+	    for i in xrange(nver):
 		surface += vertices[i,0]*vertices[i+1,1] - vertices[i+1,0]*vertices[i,1]
 	    self.surface.append( 0.5*abs(surface) )
 	self.surface = np.array(self.surface)
@@ -168,14 +170,16 @@ class voronoifield(object):
 	    axes = fig.add_subplot(1,1,1)
 	#Detecting cmap
 	exec( "cmapvor = matplotlib.cm.%s"%(cmap) )
-	    
+
 	#Plotting
 	i=0
 	for reg in self.regions[self.point_region]:
 	    if sum(np.array(reg)<0)==0:
 		polys = self.vertices[reg]
-		colors = cmapvor( int(255*self.f[i]/np.max(self.f)) )
-		p = matplotlib.patches.Polygon( polys, facecolor=colors, *kargs )
+		colors = cmapvor( int(255*(self.f[i]-np.min(self.f))/(np.max(self.f)-np.min(self.f))) )
+		p = matplotlib.patches.Polygon( polys, facecolor=colors, **kargs )
 		axes.add_patch(p)
 	    i+=1
+	axes.set_xlim( self.Lx )
+	axes.set_ylim( self.Ly )
 	return axes
