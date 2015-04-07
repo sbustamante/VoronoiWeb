@@ -1,8 +1,7 @@
 # VoronoiWeb
-
-*Sebastian Bustamante*
-
-*Nataly Mateus*
+by:
+**Sebastian Bustamante**
+**Nataly Mateus**
 
 Calculating the cosmic web using Voronoi Tessellations
 
