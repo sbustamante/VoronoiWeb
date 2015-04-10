@@ -2,17 +2,11 @@
 #	VORONOI WEB: CONFIGURATION FILE
 #**************************************************************************************************
 #
-#--------------------------------------------------------------------------------------------------
-#		GENERAL PARAMETERS
-#--------------------------------------------------------------------------------------------------
 #Box Length [Mpc h^-1]
-L	 	= 	50
+lbox=		50
 #
-#Linking lenght (size of neighbourhood) [cells]
-b 		= 	1
+#Linking lenght
+link=		1
 #
-#Minimum size to consider a void region [cells^3]
-Cells 		= 	1
-#
-#Neighbourhood lenght for median filtering [cells]
-Neighbours	= 	1
+#Box Ndiv
+nbox=		200

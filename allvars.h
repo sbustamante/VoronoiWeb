@@ -2,17 +2,19 @@
 			      MACROS
 **************************************************************************************************/
 //General Macros
-#define NMAX1		1000
+#define NMAX1		100
+#define NMAX2		1000
 #define MY_FREE(ptr)	free(ptr); ptr = NULL;
 
 //Macros for Parameters
-#define LBOX		0	//Comoving length of the simulation
-#define LINK		1	//Linking lenght for the FOF method
-#define MAXV		2	//Minimum size to consider a void region [cells^3]
+#define LBOX		0		//Comoving length of the simulation
+#define LINK		1		//Linking lenght for the FOF method
+#define NBOX		2		//Linking lenght for the FOF method
 
-#define X		0	//X coordinate
-#define Y		1	//Y coordinate
-#define Z		2	//Z coordinate
+//Other macros
+#define X		0		//X coordinate
+#define Y		1		//Y coordinate
+#define Z		2		//Z coordinate
 
 
 /**************************************************************************************************
@@ -49,16 +51,13 @@ struct particle{
     int idrhoFA;
     };
     
-    
+
 /**************************************************************************************************
 			      HEADERS
 **************************************************************************************************/
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include <time.h>
 #include <string.h>
-#include <sys/stat.h>
-#include <dirent.h>
 
 #include "proto.h"

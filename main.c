@@ -1,5 +1,6 @@
 #include "allvars.h"
 
+
 int main( int argc, char *argv[] )
 {
     //Parameters
@@ -8,6 +9,8 @@ int main( int argc, char *argv[] )
     printf( "\n\n******************************** VORONOI WEB ********************************\n" );
     //Loading Configuration------------------------------------------------------------------------
     read_parameters( p, argv[1] );
+
+    printf("%f %f %f\n", p[LBOX], p[LINK], p[NBOX]);
     
     return 0;
 }
