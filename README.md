@@ -1,7 +1,16 @@
-# VoronoiWeb
+VoronoiWeb
+==============================================
+**Sebastian Bustamante**
+*(Universidad de Antioquia)*
 
-by: **Sebastian Bustamante, Nataly Mateus**
+**Nataly Mateus**
+*(Universidad de Antioquia)*
 
-Calculating the cosmic web using Voronoi Tessellations
+Description
+----------------------------------------------
+Calculating the cosmic web using Voronoi Tessellations.
 
-Basic implementation using scipy and matplotlib [here](http://nbviewer.ipython.org/github/sbustamante/Voronoi/blob/master/codes/voronoi_differentiation.ipynb).
+
+Others
+----------------------------------------------
+Basic implementation and plotting using scipy and matplotlib [here](http://nbviewer.ipython.org/github/sbustamante/Voronoi/blob/master/others/voronoi_differentiation.ipynb).
