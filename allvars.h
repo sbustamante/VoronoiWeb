@@ -18,37 +18,24 @@
 
 
 /**************************************************************************************************
-			      STRUCTURES
+			      STRUCTURES AND TYPEDEFS
 **************************************************************************************************/
+//Type of variables to be used
+#ifdef DOUBLEPRECISION
+typedef double decimal;
+#else
+typedef float decimal;
+#endif
+
+//Structure of particles including voronoi information
 struct particle{
-    //Number of cells in void region
-    long int Ncells;
-    //Cells ID of this void region
-    long long int *cells;
-    
-    //Number of children voids
-    int Nchildren;
-    //Children voids ID
-    int *children;
-    
-    //Checked
-    int check;
-    //Index of this void
-    long int index;
-    
-    //Number of neighbour voids
-    int Nneighbours;
-    //Indexes of neighbours
-    long int *neighbours;
-    //Number of shared cells with neighbours
-    int *Nneigh_cells;
-    //Mean FA(density) across boundaries for each neighbour
-    float *neigh_mean;
-    
-    //ID of the cell corresponding with the Density centre of the void
-    int idrhoC;
-    //ID of the cell corresponding with the FA centre of the void
-    int idrhoFA;
+    //GENERAL PROPERTIES---------------------------------------------
+    //Mass of each particle
+    decimal mass;
+    //Position
+    decimal r[3];
+    //Velocity
+    decimal v[3];
     };
     
 

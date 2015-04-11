@@ -83,7 +83,6 @@ int read_parameters( float parameters[],
     //Reading
     while( getc( file_values ) != EOF ){
 	fscanf( file_names, "%s", names );
-// 	printf("%d   %s\n",parameter_index( names ), names );
 	fscanf( file_values, "%f", &parameters[ parameter_index( names ) ] );}
 	
     fclose( file_names );

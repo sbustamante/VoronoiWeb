@@ -7,10 +7,8 @@ int main( int argc, char *argv[] )
     float p[NMAX1];
     
     printf( "\n\n******************************** VORONOI WEB ********************************\n" );
-    //Loading Configuration------------------------------------------------------------------------
+    //Loading Configuration File
     read_parameters( p, argv[1] );
-
-    printf("%f %f %f\n", p[LBOX], p[LINK], p[NBOX]);
     
     return 0;
 }
